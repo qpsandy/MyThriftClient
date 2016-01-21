@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TFS Pre-register Entry</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>TFS Pre-register Company List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>CompanyName</th>
+      <th>CompanyNameLocal</th>
+      <th>CompanyAddress</th>
+      <th>Email</th>
+      <th>Telephone</th>
+      <th>ContactPerson</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="company,companyIter : ${companys}">
+      <td th:text="${companyIter.count}"></td>
+      <td th:text="${company.companyName}"></td>
+      <td th:text="${company.companyNameLocal}"></td>
+      <td th:text="${company.companyAddress}"></td>
+      <td th:text="${company.txtEmail}"></td>
+      <td th:text="${company.telephone}"></td>
+      <td th:text="${company.contactPerson}"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

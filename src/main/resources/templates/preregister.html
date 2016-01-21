@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TFS Pre-register Entry</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>TFS Pre-register Entry</h1>
+
+<input type="button" onclick="location.href='/register';" value="Login In" />
+
+<h2>Brief User Information</h2>
+
+<form method="post" action="preregister">
+<p>
+	<label for="companyName">company Name:</label>
+	<input type="text" th:field="${company.companyName}" value="companyName" />
+	<br/>
+	<label for="companyNameLocal">company Name Local:</label>
+	<input type="text" th:field="${company.companyNameLocal}" value="companyNameLocal" />
+	<br/>
+	<label for="companyAddress">company Address:</label>
+	<input type="text" th:field="${company.companyAddress}" value="companyAddress" />
+	<br/>
+	<label for="Email">Email:</label>
+	<input type="text" th:field="${company.txtEmail}" value="Email" />
+	<br/>
+	<label for="telephone">telephone:</label>
+	<input type="text" th:field="${company.telephone}" value="telephone" />
+	<br/>
+	<label for="contactPerson">contactPerson:</label>
+	<input type="text" th:field="${company.contactPerson}" value="contactPerson" />
+	<br/>
+	
+	<input type="submit" />
+</p>
+</form>
+
+<br/>
+	<dl>
+	    <dt>Company Name:</dt>
+	    <dd th:text="${company.companyName}">company Name</dd>
+	
+	    <dt>Company Name Local:</dt>
+	    <dd th:text="${company.companyNameLocal}">company Name Local</dd>
+	
+	    <dt>Company Address:</dt>
+	    <dd th:text="${company.companyAddress}">company Address</dd>
+	    
+	    <dt>Email:</dt>
+	    <dd th:text="${company.txtEmail}">Email</dd>
+	    
+	    <dt>Telephone:</dt>
+	    <dd th:text="${company.telephone}">telephone</dd>
+	    
+	    <dt>Contact Person:</dt>
+	    <dd th:text="${company.contactPerson}">Contact Person</dd>
+	</dl>
+</body>
+</html>
